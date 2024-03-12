@@ -1,0 +1,14 @@
+[tool.poetry]
+name = "max-flow-algorithms"
+version = "0.1.0"
+description = ""
+authors = ["Robert Blum <robertblum2001@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
