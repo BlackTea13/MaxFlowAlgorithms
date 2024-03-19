@@ -26,13 +26,11 @@ class FordFulkerson:
     def max_flow(self, graph: ResidualGraph) -> int:
         # Find an augmenting path (a path with vertices unused capacity greater than 0)
         inf = sys.maxsize
-        source = graph.source
         max_f = 0
-        flow = self.__dfs__(graph, source, inf)
+        flow = self.__dfs__(graph, graph.source, inf)
         while flow != 0:
             max_f += flow
-            flow = self.__dfs__(graph, source, inf)
-
+            flow = self.__dfs__(graph, graph.source, inf)
         return max_f
 
 

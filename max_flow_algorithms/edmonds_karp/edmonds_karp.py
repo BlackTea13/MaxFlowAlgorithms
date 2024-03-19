@@ -4,9 +4,8 @@ from max_flow_algorithms.graph_def import ResidualGraph, Edge
 
 class EdmondsKarp:
     def __bfs__(self, graph: ResidualGraph) -> int:
-        frontier = []
+        frontier = [graph.source]
         visited = set()
-        frontier.append(graph.source)
         visited.add(graph.source)
         path: List[Edge] = [None] * graph.num_vertices
 

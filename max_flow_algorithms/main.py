@@ -3,6 +3,7 @@ import copy
 from graph_def import ResidualGraph
 from ford_fulkerson.ford_fulkerson import FordFulkerson
 from edmonds_karp.edmonds_karp import EdmondsKarp
+from dinics.dinics import Dinic
 
 if __name__ == '__main__':
     print("Hello World!")
@@ -38,5 +39,10 @@ g2 = copy.deepcopy(g)
 ek_solver = EdmondsKarp()
 max_flow2 = ek_solver.max_flow(graph=g2)
 
+g3 = copy.deepcopy(g)
+di_solver = Dinic()
+max_flow3 = di_solver.max_flow(graph=g3)
+
 print(max_flow)
 print(max_flow2)
+print(max_flow3)
